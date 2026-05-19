@@ -69,19 +69,23 @@ The application allows customers to:
 # Project Screenshots 📸
 
 ## Flight Search Page
-(Add Screenshot Here)
+<img width="1918" height="563" alt="Screenshot 2026-05-19 132334" src="https://github.com/user-attachments/assets/ff021ad1-4de8-455b-bcac-22a5ebe84d76" />
+
 
 ## Available Flights List
-(Add Screenshot Here)
+<img width="1918" height="687" alt="Screenshot 2026-05-19 132347" src="https://github.com/user-attachments/assets/3e4ec8c8-1793-4759-a093-9d690b63b45a" />
 
 ## Flight Booking Popup
-(Add Screenshot Here)
+<img width="1805" height="621" alt="Screenshot 2026-05-19 132452" src="https://github.com/user-attachments/assets/88f8a63c-5db8-425c-94db-9a9ff3087909" />
+
 
 ## Booking Success Toast Message
-(Add Screenshot Here)
+<img width="1917" height="802" alt="Screenshot 2026-05-19 132616" src="https://github.com/user-attachments/assets/86c903d9-baa5-4922-8b20-015f57c703fa" />
+
 
 ## Salesforce Flow Automation
-(Add Screenshot Here)
+<img width="1747" height="727" alt="Screenshot 2026-05-19 132939" src="https://github.com/user-attachments/assets/eaf4d9c8-3300-4f9f-b313-3d82a2f187d5" />
+
 
 ---
 
