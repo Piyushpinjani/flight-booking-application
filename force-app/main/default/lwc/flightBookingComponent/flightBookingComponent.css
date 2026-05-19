@@ -1,0 +1,36 @@
+:host{
+    --slds-c-card-color-background:#cafc03;
+}
+
+.app
+{
+    background-color: aquamarine;
+}
+
+lightning-input{
+    margin:10px 0;
+    font-size: 15px;
+    color:#333;
+}
+
+table{
+    width:100%;
+    border:1px solid #ddd;
+    border-collapse:collapse;
+    font-size: 15px;
+    color:#333;
+}
+
+th{
+    background-color: #f2f2f2;
+    color:#333;
+    font-weight:bold;
+    padding:10px;
+
+}
+
+td{
+    padding:10px;
+    font-size:15px;
+
+}

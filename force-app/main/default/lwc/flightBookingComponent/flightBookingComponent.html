@@ -1,0 +1,87 @@
+<template>
+    <lightning-card title="Search Flights">
+
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" label="Departure City" value={DepartureAirport}
+                onchange={handleDepartureAirportChange}></lightning-input>
+            <lightning-input type="text" label="Arrival City" value={ArrivalAirport}
+                onchange={handleArrivalAirportChange}></lightning-input>
+            <lightning-input type="date" label="Departure Date" value={DepartureDate}
+                onchange={handleDepartureDateChange}></lightning-input>
+
+            <lightning-button variant="brand" label="Search Flights" onclick={handleSearchFlights}></lightning-button>
+
+
+        </div>
+
+    </lightning-card>
+
+    <div if:true={showFlights}>
+        <lightning-card>
+
+            <table border="1" cellpadding="5" cellspacing="0" style="border-collapse:collapse;">
+                <thead>
+                    <tr>
+                        <th style="text-align:center;">Airline Names</th>
+                        <th style="text-align:center;">Departure City</th>
+                        <th style="text-align:center;">Arrival City</th>
+                        <th style="text-align:center;">Departure Date</th>
+                        <th style="text-align:center;">Price</th>
+                        <th style="text-align:center;">Click To Book</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={flights} for:item="flight" for:index="index">
+                        <tr key={flight.Id}>
+                            <td style="text-align:center;">{flight.Name}</td>
+                            <td style="text-align:center;">{flight.City_From__c}</td>
+                            <td style="text-align:center;">{flight.City_To__c}</td>
+                            <td style="text-align:center;">{flight.Departure_Date__c}</td>
+                            <td style="text-align:center;">{flight.Price__c}</td>
+                            <td style="text-align:center;"><lightning-button variant="brand" label="Book"
+                                    onclick={handleBookNow} data-flight-id={flight.Id}></lightning-button>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+
+        </lightning-card>
+    </div>
+    <template if:true={showModal}>
+        <div role="dialog" aria-modal="true" aria-labelledby="modal-heading-01"
+            class="slds-modal slds-fade-in-open slds-modal_large">
+            <div class="slds-modal__container">
+                <button class="slds-button slds-button_icon slds-modal__close">
+                    <lightning-icon icon-name='action:close' alternative-text='close' size='large' title='close'
+                        onclick={handleModal}></lightning-icon>
+                </button>
+                <div class="slds-modal__header">
+                    <h1 class="slds-modal__title slds-hyphenate">Book Flight</h1>
+                </div>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <p>Airline Name:-{selectedFlight.Name}</p>
+                    <p>Departure City:-{selectedFlight.City_From__c}</p>
+                    <p>Arrival City:-{selectedFlight.City_To__c}</p>
+                    <p>Departure Date:-{selectedFlight.Departure_Date__c}</p>
+                    <p>Price:-{selectedFlight.Price__c}</p>
+
+
+                    <div class="slds-p-around_medium lgc-bg">
+                        <lightning-input type="text" label="Name" value={name} onchange={handlename}></lightning-input>
+                        <lightning-input type="email" label="Email" value={email}
+                            onchange={handleemail}></lightning-input>
+                        <lightning-input type="tel" label="Phone" value={phone}
+                            onchange={handlephone}></lightning-input>
+
+                    </div>
+                    <lightning-button label="Book Now" onclick={handleConfirmBooking}></lightning-button>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    </template>
+</template>
