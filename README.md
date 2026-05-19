@@ -91,7 +91,9 @@ The application allows customers to:
 
 # Demo Video 🎥
 
-(Add Video Link Here)
+## 🎥 Project Demo
+
+[![Project Demo](assets/demo-thumbnail.png)](https://github.com/user-attachments/assets/87e5f6f4-57a4-4784-bdbd-16114fd4b20c)
 
 ---
 
